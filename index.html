@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Prototype</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>📚 Bookshelf App</h1>
+    <form id="form-buku">
+      <input
+        type="text"
+        id="judul"
+        placeholder="tulis judul buku disini..."
+        required
+      />
+      <input
+        type="text"
+        id="penulis"
+        placeholder="tulis penulis buku disini..."
+        required
+      />
+      <input
+        type="number"
+        id="tahun"
+        placeholder="tanggal buku diterbit..."
+        required
+      />
+      <label><input type="checkbox" id="Selesai" />Selesai Dibaca</label>
+      <button type="submit">Tambah Buku</button>
+    </form>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="🔍 Cari judul buku..." />
+    </div>
+
+    <h2>Belum Selesai Dibaca</h2>
+
+    <ul id="unread"></ul>
+
+    <h2>Selesai Dibaca</h2>
+    <ul id="read"></ul>
+
+    <div id="modal-edit" class="modal hidden">
+      <div class="modal-content">
+        <h2>Edit Buku</h2>
+        <form id="edit-form">
+          <input
+            type="text"
+            id="edit-judul"
+            placeholder="Judul Buku"
+            required
+          />
+          <input type="text" id="edit-penulis" placeholder="Penulis" required />
+          <input type="number" id="edit-tahun" placeholder="Tahun" required />
+          <label>
+            <input type="checkbox" id="edit-selesai" />
+            Selesai Dibaca
+          </label>
+          <div class="modal-actions">
+            <button type="submit">Update Buku</button>
+            <button type="button" id="close-modal">Batal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
