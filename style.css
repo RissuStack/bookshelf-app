@@ -244,8 +244,17 @@ li button:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
   form,
+  .search-container,
   ul {
     width: 100%;
     padding: 10px;
@@ -254,10 +263,39 @@ li button:hover {
   li {
     flex-direction: column;
     align-items: flex-start;
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+
+  .book-info {
+    padding-left: 0;
   }
 
   .action-buttons {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  li button {
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions button {
+    width: 100%;
   }
 }
